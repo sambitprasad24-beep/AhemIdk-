@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Little Question 💗</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Comic Sans MS", cursive;
+      background: linear-gradient(135deg, #ffd6e8, #fff0f7);
+      color: #7a2850;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 650px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 35px 25px;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(190, 70, 120, 0.2);
+    }
+
+    h1 {
+      color: #e75491;
+      font-size: 38px;
+    }
+
+    p {
+      font-size: 19px;
+      line-height: 1.7;
+    }
+
+    .question {
+      margin: 25px 0;
+      padding: 20px;
+      border-radius: 20px;
+      background: #fff0f6;
+      font-size: 24px;
+      font-weight: bold;
+      color: #d83f7d;
+    }
+
+    button {
+      border: none;
+      border-radius: 25px;
+      padding: 13px 22px;
+      margin: 8px;
+      font-size: 16px;
+      font-family: inherit;
+      cursor: pointer;
+      background: #ff8fbd;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #e75491;
+      transform: scale(1.05);
+    }
+
+    .back {
+      background: #c9a0b5;
+    }
+
+    .back:hover {
+      background: #a77b91;
+    }
+
+    #answer {
+      margin-top: 25px;
+      padding: 18px;
+      border-radius: 18px;
+      background: #ffe1ee;
+      color: #a52d61;
+      font-size: 18px;
+      display: none;
+    }
+
+    .heart {
+      font-size: 45px;
+      animation: heartbeat 1.5s infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.15);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="heart">💗</div>
+
+    <h1>GOLUMON💗</h1>
+
+    <p>
+      I know things may not always be perfect,
+      but you still mean something special to me.
+    </p>
+
+    <div class="question">
+      Can we talk and try to understand each other again? 🌷
+    </div>
+
+    <button onclick="showAnswer('yes')">
+      Yes, let’s talk 💗
+    </button>
+
+    <button onclick="showAnswer('time')">
+      I need some time 🌸
+    </button>
+
+    <button onclick="showAnswer('friends')">
+      Friends for now 🤍
+    </button>
+
+    <div id="answer"></div>
+
+    <br>
+
+    <button class="back" onclick="goBack()">
+      ⬅ Back to Letter
+    </button>
+
+    <button onclick="goNext()">
+      Continue 💌
+    </button>
+
+  </div>
+
+  <script>
+    function showAnswer(choice) {
+      const answer = document.getElementById("answer");
+
+      answer.style.display = "block";
+
+      if (choice === "yes") {
+        answer.innerHTML =
+          "That means a lot. Let’s talk calmly and honestly. No pressure, just understanding. 💗";
+      }
+
+      if (choice === "time") {
+        answer.innerHTML =
+          "That’s okay. Take your time. Your feelings and comfort matter. 🌷";
+      }
+
+      if (choice === "friends") {
+        answer.innerHTML =
+          "I respect that. I’m thankful for the memories and I wish you happiness always. 🤍";
+      }
+    }
+
+    function goBack() {
+      window.location.href = "letter.html";
+    }
+
+    function goNext() {
+      window.location.href = "thankyou.html";
+    }
+  </script>
+
+</body>
+</html>
