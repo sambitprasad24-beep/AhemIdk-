@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>For GOLUMON💗</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      font-family: "Comic Sans MS", cursive;
+      text-align: center;
+      background: linear-gradient(135deg, #ffc1dc, #fff1f7);
+      color: #7b2850;
+      overflow-x: hidden;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 650px;
+      padding: 40px 25px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.93);
+      box-shadow: 0 10px 30px rgba(190, 70, 120, 0.2);
+    }
+
+    .heart {
+      font-size: 75px;
+      animation: heartbeat 1.5s infinite;
+    }
+
+    h1 {
+      color: #e75491;
+      font-size: 42px;
+      margin: 15px 0;
+    }
+
+    h2 {
+      color: #d83f7d;
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 19px;
+      line-height: 1.8;
+    }
+
+    .message {
+      margin: 25px 0;
+      padding: 20px;
+      border-radius: 22px;
+      background: #ffe4ef;
+      color: #a52d61;
+      font-size: 20px;
+      line-height: 1.8;
+    }
+
+    button {
+      border: none;
+      border-radius: 28px;
+      padding: 15px 28px;
+      margin-top: 15px;
+      font-size: 18px;
+      font-family: inherit;
+      cursor: pointer;
+      background: #ff8fbd;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #e75491;
+      transform: scale(1.06);
+    }
+
+    .small-text {
+      margin-top: 25px;
+      font-size: 15px;
+      color: #b76b8c;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.15);
+      }
+    }
+
+    .floating-heart {
+      position: fixed;
+      bottom: -30px;
+      font-size: 25px;
+      animation: floatUp 7s linear infinite;
+      pointer-events: none;
+    }
+
+    .heart-one {
+      left: 10%;
+      animation-delay: 1s;
+    }
+
+    .heart-two {
+      left: 75%;
+      animation-delay: 3s;
+    }
+
+    .heart-three {
+      left: 45%;
+      animation-delay: 5s;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="floating-heart heart-one">💗</div>
+  <div class="floating-heart heart-two">💕</div>
+  <div class="floating-heart heart-three">🌷</div>
+
+  <div class="card">
+
+    <div class="heart">💗</div>
+
+    <h1>Hey GOLUMON💗</h1>
+
+    <h2>A Little Website Made Just For You 🌸</h2>
+
+    <p>
+      This is a small collection of memories,
+      feelings, and things I wanted to say.
+    </p>
+
+    <div class="message">
+      Sometimes words are difficult to say,
+      so I made this little corner of the internet
+      to express them gently. 💌
+    </div>
+
+    <button onclick="startStory()">
+      Start Our Story 💗
+    </button>
+
+    <p class="small-text">
+      Made with care, courage, and lots of pink hearts 🌷
+    </p>
+
+  </div>
+
+  <script>
+    function startStory() {
+      window.location.href = "story.html";
+    }
+  </script>
+
+</body>
+</html>
